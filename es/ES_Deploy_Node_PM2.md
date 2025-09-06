@@ -225,6 +225,20 @@ module.exports = {
 
 ---
 
+## 📖 Diccionario de términos claves
+
+- **PM2**: Administrador de procesos para Node.js. Permite ejecutar aplicaciones en segundo plano, reiniciarlas automáticamente si fallan y configurarlas para que inicien al arrancar el servidor.
+- **Bash**: Intérprete de comandos más común en sistemas Linux/Unix. Sirve para ejecutar instrucciones y escribir scripts automatizados (`.sh`).
+- **Symlink** (Enlace simbólico): Archivo especial que actúa como un "atajo" o puntero a otra carpeta o archivo. En los despliegues se usa para que la carpeta `current` siempre apunte a la última versión liberada sin mover archivos manualmente.
+- **Release**: Una copia del proyecto dentro de una carpeta con marca de tiempo. Sirve para tener versiones anteriores listas en caso de rollback.
+- **Shared**: Carpeta que guarda archivos persistentes (ejemplo: `.env`, `logs`, `uploads`) y que se enlazan a cada release para que no se pierdan con cada deploy.
+- **Deploy Script** (`deploy.sh`): Script en Bash que automatiza el proceso de descargar la última versión del proyecto, instalar dependencias, compilar y reiniciar el servicio con PM2.
+- **fnm** (Fast Node Manager): Herramienta para instalar y manejar múltiples versiones de Node.js de manera sencilla.
+- **pnpm**: Gestor de paquetes alternativo a npm/yarn, más rápido y con mejor manejo de dependencias.
+- **Systemd**: Sistema de inicio de Linux que gestiona servicios y procesos, utilizado junto a PM2 para que las apps reinicien automáticamente tras un reinicio del VPS.
+
+---
+
 <div align="center"> 
   <a href="https://github.com/junior-r"> 
     <img src="https://avatars.githubusercontent.com/junior-r" loading="lazy" width="100" style="border-radius: 50%;" alt="Junior R's GitHub Profile"> 
