@@ -210,7 +210,8 @@ module.exports = {
     apps: [
         {
             name: "api",
-            script: "/root/api/current/build/index.js",
+            script: "build/index.js",
+            cwd: "/root/api/current",
             instances: "max",
             exec_mode: "cluster",
             env_production: {

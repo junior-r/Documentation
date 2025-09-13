@@ -153,7 +153,7 @@ ln -sfn $NEW_RELEASE $APP_DIR/current
 echo "💡 Release activa: $(readlink -f $APP_DIR/current)"
 
 # Reload con pm2 (zero-downtime)
-pm2 startOrReload ecosystem.config.js --env production
+pm2 eload ecosystem.config.js --env production
 
 # Mantener solo las últimas 5 releases
 cd $RELEASES_DIR
@@ -210,7 +210,8 @@ module.exports = {
     apps: [
         {
             name: "api",
-            script: "/root/api/current/build/index.js",
+            script: "build/index.js",
+            cwd: "/root/api/current",
             instances: "max",
             exec_mode: "cluster",
             env_production: {
